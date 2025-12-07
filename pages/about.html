@@ -19,9 +19,22 @@
 
 
         .logo {
+            display: flex;
+            gap:10px;
+            align-items: center;
+        }
+
+        .logo img{
+            width: 35px;
+            height:35px;
+            border-radius: 50%;
+
+        }
+
+        .logo span{
             font-size: 22px;
             font-weight: 600;
-            color: #121312;
+            font-family: 'Poppins',sans-serif;
         }
 
         .nav-links {
@@ -59,7 +72,7 @@
             display: flex;
             justify-content: center;
             gap: 25px;
-            flex-wrap: wrap;
+            flex-wrap:nowrap;
         }
 
         .card {
@@ -271,6 +284,157 @@
         .footer-bottom p {
             font-size: 14px
         }
+
+
+@media (max-width: 950px) {
+
+    .navbar {
+        width: 100%;
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        position: static;   
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .welcome {
+        width: 100%;
+        padding: 20px;
+    }
+
+    img[alt="about-logo"] {
+        width: 100%;
+        height: auto;
+    }
+
+    
+    .cards-section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+
+    .trainer-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trainer-card {
+        width: 80%;
+    }
+
+    
+    .footer-container {
+        width: 100%;
+        margin: 0;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-box {
+        width: 100%;
+    }
+
+    .newsletter {
+        width: 90%;
+    }
+
+    .newsletter-box {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .newsletter input,
+    .newsletter button {
+        width: 100%;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .logo span {
+        font-size: 16px;
+    }
+
+    .nav-links {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .trainer-card {
+        width: 95%;
+    }
+
+    .trainer-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .footer-box p, 
+    .footer-box ul li a {
+        font-size: 14px;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .logo img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .logo span {
+        font-size: 14px;
+    }
+
+    .nav-links {
+        font-size: 12px;
+        gap: 8px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .newsletter h3 {
+        font-size: 16px;
+    }
+
+}
+
     </style>
 
 </head>
@@ -279,7 +443,9 @@
 
     <div>
         <nav class="navbar">
-            <div class="logo">Blissful Yoga Hub</div>
+            <div class="logo">
+                <img src="../images/main-logo.jpeg" alt="yoga-logo">
+            <span>Blissful Yoga Hub</span></div>
 
             <div class="nav-links">
                 <a href="../index.html">Home</a>
